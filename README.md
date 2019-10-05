@@ -6,6 +6,9 @@
 
 </div>
 
+(https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
+> A curated list of awesome READMEs
+
 ## _About_
 - This is a Page Summarizer API 
 - Requirements of the system can be found in [Task 2](https://docs.google.com/document/d/1IZs92nfnh85d7zwQquV25chc0NXsBZUf0KxqxqKBAsU/edit)
