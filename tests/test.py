@@ -8,7 +8,8 @@ import httpretty
 class RestTest(unittest.TestCase):
     """ Testing """
     @httpretty.activate
-    def test_one(self):
+    @classmethod
+    def test_one(cls):
         """Testing GET Request"""
         httpretty.register_uri(httpretty.GET, "http://127.0.0.1:5000/",
                                body="""{\"message\": \"This is SMS spam detection model.\
@@ -21,13 +22,14 @@ class RestTest(unittest.TestCase):
                 Use the format {'message': 'SMS message'} and POST to get prediction.\"}"""
 
     # Testing POST Request
-    def test_two(self):
+    @classmethod
+    def test_two(cls):
         """Testing POST Request"""
         httpretty.register_uri(
             httpretty.POST, "http://127.0.0.1:5000/")
 
         response = requests.post('http://127.0.0.1:5000/',
-                                 headers={'Content-Type': 'application/json'}, 
+                                 headers={'Content-Type': 'application/json'},
                                  data='{"message": "Welcome home"}')
         assert str(response.json()
                    ) == "{'results': 'Not a spam'}"
