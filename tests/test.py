@@ -11,13 +11,14 @@ class RestTest(unittest.TestCase):
     def test_one(self):
         """Testing GET Request"""
         httpretty.register_uri(httpretty.GET, "http://127.0.0.1:5000/",
-        body="""{\"message\": \"This is SMS spam detection model. 
+                               body="""{\"message\": \"This is SMS spam detection model.\
                 Use the format {'message': 'SMS message'} and POST to get prediction.\"}""")
 
         response = requests.get('http://127.0.0.1:5000/')
 
         print(response)
-        assert response.text == "{\"message\": \"This is SMS spam detection model. Use the format {'message': 'SMS message'} and POST to get prediction.\"}"
+        assert response.text == """{\"message\": \"This is SMS spam detection model.\
+                Use the format {'message': 'SMS message'} and POST to get prediction.\"}"""
 
     # Testing POST Request
     def test_two(self):
