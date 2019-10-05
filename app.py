@@ -1,8 +1,7 @@
+"""A Python Page Summarizer API"""
+
 import pickle
-from flask import Flask, render_template, url_for, request, jsonify
-import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
+from flask import Flask, request, jsonify
 import joblib
 
 # load model
@@ -17,30 +16,27 @@ APP = Flask(__name__)
 
 
 @APP.route('/', methods=['GET'])
+
 def home():
-    # Give message to user
-    return {"message": "This is SMS spam detection model. Use the format {'message': 'SMS message'} and POST to get prediction."}
+    """ Returns a message to user """
+    return {"message": "This is SMS spam detection model.format{'message':'SMS message'} and POST."}
 
 
 @APP.route('/', methods=['POST'])
 def predict():
-    # get data
+    """ get data and return response """
     data = request.get_json(force=True)
     data = data['message']
     data = [data]
-    # convert data into array
     arrt = COUNTVEC.transform(data).toarray()
 
-    # predictions
     my_prediction = CLF.predict(arrt)
 
-    # check predicted value
     if my_prediction[0] == 0:
         response = "Not a spam"
     elif my_prediction[0] == 1:
         response = "This is a spam o!"
 
-    # return data
     return jsonify(results=response)
 
 
