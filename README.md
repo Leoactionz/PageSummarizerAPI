@@ -1,16 +1,17 @@
-<div align="left">
+<div align="right">
 
-# Awesome README ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
+![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 
 <br>
 
 </div>
 
-## _About_
+
+> ## _About_
 - This is a Page Summarizer API 
 - Requirements of the system can be found in [Task 2](https://docs.google.com/document/d/1IZs92nfnh85d7zwQquV25chc0NXsBZUf0KxqxqKBAsU/edit)
 
-## :page_with_curl: _Installation Guide_
+## :page_with_curl: _Guide_
 
 **1** Open up your favourite console & clone this repo somewhere:
 
@@ -43,3 +44,13 @@
 ```⤳ cd tests & python test.py```
 
 *Happy Coding!*
+
+
+<div align="center">
+
+![hng](https://res.cloudinary.com/iambeejayayo/image/upload/v1554240066/brand-logo.png)
+
+<br>
+
+</div>
+
