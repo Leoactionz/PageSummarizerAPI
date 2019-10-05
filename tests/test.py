@@ -1,15 +1,17 @@
-from sure import expect
+"""A Python Page Summarizer API Test"""
+import unittest
 import requests
 import httpretty
-import unittest
+
 
 
 class RestTest(unittest.TestCase):
+    """ Testing """
     @httpretty.activate
-    # Testing GET Request
     def test_one(self):
+        """Testing GET Request"""
         httpretty.register_uri(httpretty.GET, "http://127.0.0.1:5000/",
-                               body="{\"message\": \"This is SMS spam detection model. Use the format {'message': 'SMS message'} and POST to get prediction.\"}")
+            body="{\"message\": \"This is SMS spam detection model. Use the format {'message': 'SMS message'} and POST to get prediction.\"}")
 
         response = requests.get('http://127.0.0.1:5000/')
 
@@ -18,6 +20,7 @@ class RestTest(unittest.TestCase):
 
     # Testing POST Request
     def test_two(self):
+        """Testing POST Request"""
         httpretty.register_uri(
             httpretty.POST, "http://127.0.0.1:5000/")
 
