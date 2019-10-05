@@ -6,7 +6,7 @@
 
 </div>
 
-## :page_with_curl: _About_
+## _About_
 - This is a Page Summarizer API 
 - Requirements of the system can be found in [Task 2](https://docs.google.com/document/d/1IZs92nfnh85d7zwQquV25chc0NXsBZUf0KxqxqKBAsU/edit)
 
